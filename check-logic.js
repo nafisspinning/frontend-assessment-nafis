@@ -18,11 +18,6 @@ const users = [
   { id: 6, name: 'Fani', age: 32, gender: 'female' },
 ];
 
-console.log('\nprocessUserData');
+console.log('\nberikut ini hasil processUserData:');
 console.dir(processUserData(users), { depth: null });
-console.log('male harusnya count 2 averageAge 27.5');
-console.log('female harusnya count 3 averageAge 31.3');
 
-console.log('\nCitra (17 tahun) harus hilang dari hasil di atas.');
-console.log('Array kosong:', processUserData([]));
-console.log('Bukan array:', processUserData(null));
