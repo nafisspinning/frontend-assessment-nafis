@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Mechanical Keyboard",
+      "category": "Electronics",
+      "price": 1250000,
+      "status": "In Stock",
+      "createdAt": "2024-01-15T09:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Ceramic Pour-Over Coffee Set",
+      "category": "Home & Kitchen",
+      "price": 350000,
+      "status": "In Stock",
+      "createdAt": "2024-02-02T14:10:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes — Trail Edition",
+      "category": "Apparel",
+      "price": 1450000,
+      "status": "Out of Stock",
+      "createdAt": "2024-03-11T11:45:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Minimalist Desk Lamp",
+      "category": "Home & Kitchen",
+      "price": 425000,
+      "status": "In Stock",
+      "createdAt": "2024-04-20T08:00:00.000Z"
+    }
+  ]
+}

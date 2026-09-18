@@ -1,0 +1,390 @@
+:root {
+  --blue: #2563eb;
+  --red: #dc2626;
+  --line: #e2e8f0;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --text: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.count {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.tag {
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 12px;
+}
+
+.notice {
+  padding: 11px 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.notice.ok {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.notice.error {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search {
+  flex: 1;
+  min-width: 190px;
+}
+
+.add {
+  margin-left: auto;
+}
+
+input,
+select {
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  background: white;
+  color: var(--text);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.invalid {
+  border-color: var(--red);
+}
+
+.btn {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--bg);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn.primary {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
+}
+
+.btn.primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn.danger {
+  background: var(--red);
+  border-color: var(--red);
+  color: white;
+}
+
+.btn.small {
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+.btn.small.danger {
+  background: white;
+  border-color: var(--line);
+  color: var(--red);
+}
+
+.panel {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  text-align: left;
+  padding: 11px 14px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge.green {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.badge.red {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.skeleton {
+  padding: 14px;
+}
+
+.skeleton-row {
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #f1f5f9, #e2e8f0, #f1f5f9);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.empty {
+  padding: 44px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.empty p {
+  margin: 6px 0 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 440px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.modal-head h2 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.close {
+  border: none;
+  background: none;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 18px;
+}
+
+.actions-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+}
+
+.error {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: var(--red);
+}
+
+.detail {
+  margin: 0;
+  font-size: 14px;
+}
+
+.detail dt {
+  margin-top: 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.detail dd {
+  margin: 3px 0 0;
+}
+
+/* Di layar kecil tabelnya jadi kartu bertumpuk.
+   Judul kolom diambil dari atribut data-label di App.jsx. */
+@media (max-width: 720px) {
+  thead {
+    display: none;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border: none;
+    padding: 6px 14px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .add {
+    margin-left: 0;
+    width: 100%;
+  }
+}
