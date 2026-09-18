@@ -12,7 +12,7 @@ Butuh Node.js 18 atau lebih baru.
 **Bagian 1**
 
 ```
-node cek-logic.js
+node check-logic.js
 ```
 
 Skrip ini menjalankan kedua fungsi dengan contoh yang ada di soal dan mencetak
@@ -65,7 +65,7 @@ diubah, bukan seluruh isi produk.
 .
 ├── db.json                 seed my-json-server, harus di root repo
 ├── logic-assessment.js     bagian 1, dua fungsi, tanpa dependency
-├── cek-logic.js            menjalankan kedua fungsi dan mencetak hasilnya
+├── check-logic.js            menjalankan kedua fungsi dan mencetak hasilnya
 └── app/
     └── src/
         ├── main.jsx        menempelkan App ke halaman
@@ -136,7 +136,7 @@ ditaruh di `:root`. Ini menghemat satu build step dan satu dependency.
   paling utama.
 - **Debounce pada pencarian.** Sekarang filter jalan tiap ketikan. Untuk empat
   produk tidak terasa, untuk ribuan data perlu ditunda sekitar 300 ms.
-- **Unit test.** `cek-logic.js` baru mencetak hasil, belum ada test yang otomatis
+- **Unit test.** `check-logic.js` baru mencetak hasil, belum ada test yang otomatis
   gagal kalau kodenya rusak. Untuk aplikasi React-nya juga belum ada test sama
   sekali.
 - **Modal yang lebih rapi**, bisa ditutup dengan Escape, fokus dipindah ke dalam
